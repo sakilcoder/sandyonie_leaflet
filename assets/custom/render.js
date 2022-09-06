@@ -61,10 +61,10 @@ function onEachsuicideRate(feature, layer) {
     
     var popup = L.popup();
     let strContent = '<h6 style="text-align: center; border-bottom:1px solid; padding-bottom:5px">' + feature.properties.porvince + '</h6>'+
-                    '<span class="text-center" >Suicide Count: <b>' + feature.properties.suicide_counts + '</b><br>' +
+                    // '<span class="text-center" >Suicide Count: <b>' + feature.properties.suicide_counts + '</b><br>' +
                     '<span class="text-center" >Suicide Rate: <b>' + feature.properties.suicide_rate + '</b><br>' +
-                    '<span class="text-center" >Attempt Rate: <b>' + feature.properties.attempt_rate + '</b><br>' +
-                    '<span class="text-center" >Gender Ratio: <b>' + feature.properties.gender_ratio + '</b>' +
+                    'Attempt Rate: <b>' + feature.properties.attempt_rate + '</b><br>' +
+                    'Gender Ratio: <b>' + feature.properties.gender_ratio + '</b>' +
                     '</span>';
     popup.setContent(strContent);
     layer.bindPopup(popup, popupOptions);    
@@ -94,10 +94,10 @@ function onEachAttemptRate(feature, layer) {
     
     var popup = L.popup();
     let strContent = '<h6 style="text-align: center; border-bottom:1px solid; padding-bottom:5px">' + feature.properties.porvince + '</h6>'+
-                    '<span class="text-center" >Suicide Count: <b>' + feature.properties.suicide_counts + '</b><br>' +
+                    // '<span class="text-center" >Suicide Count: <b>' + feature.properties.suicide_counts + '</b><br>' +
                     '<span class="text-center" >Suicide Rate: <b>' + feature.properties.suicide_rate + '</b><br>' +
-                    '<span class="text-center" >Attempt Rate: <b>' + feature.properties.attempt_rate + '</b><br>' +
-                    '<span class="text-center" >Gender Ratio: <b>' + feature.properties.gender_ratio + '</b>' +
+                    'Attempt Rate: <b>' + feature.properties.attempt_rate + '</b><br>' +
+                    'Gender Ratio: <b>' + feature.properties.gender_ratio + '</b>' +
                     '</span>';
     popup.setContent(strContent);
     layer.bindPopup(popup, popupOptions);    
@@ -127,10 +127,10 @@ function onEachGenderRatio(feature, layer) {
     
     var popup = L.popup();
     let strContent = '<h6 style="text-align: center; border-bottom:1px solid; padding-bottom:5px">' + feature.properties.porvince + '</h6>'+
-                    '<span class="text-center" >Suicide Count: <b>' + feature.properties.suicide_counts + '</b><br>' +
+                    // '<span class="text-center" >Suicide Count: <b>' + feature.properties.suicide_counts + '</b><br>' +
                     '<span class="text-center" >Suicide Rate: <b>' + feature.properties.suicide_rate + '</b><br>' +
-                    '<span class="text-center" >Attempt Rate: <b>' + feature.properties.attempt_rate + '</b><br>' +
-                    '<span class="text-center" >Gender Ratio: <b>' + feature.properties.gender_ratio + '</b>' +
+                    'Attempt Rate: <b>' + feature.properties.attempt_rate + '</b><br>' +
+                    'Gender Ratio: <b>' + feature.properties.gender_ratio + '</b>' +
                     '</span>';
     popup.setContent(strContent);
     layer.bindPopup(popup, popupOptions);    

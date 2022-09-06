@@ -22,13 +22,13 @@ L.easyButton('fa-home fa-lg', function () {
     map.setView([-3, 113.9213], 5);
 }).addTo(map);
 
-addSuicideLayer();
+// addSuicideLayer();
 addSuicideRateLayer();
 addAttemptRateLayer();
 addGenderRatioLayer();
 
 let overlays ={};
-overlays['Suicide'] = suicideLayer;
+// overlays['Suicide'] = suicideLayer;
 overlays['Suicide Rate'] = suicideRateLayer;
 overlays['Attempt Rate'] = attemptRateLayer;
 overlays['Gender Ratio'] = genderRatioLayer;
@@ -68,7 +68,7 @@ let getSuicideRateLegend = function(){
         to = suicideRateLegendValues[i + 1];
 
         labels.push(
-            '<i style="background:' + suicideRateColor(from + 1) + '"></i> ' +
+            '<i style="background:' + suicideRateColor(from+.01) + '"></i> ' +
             from + '' + (to ? ' &ndash; ' + to + '' : '+'));
     }
     str += labels.join('<br>');
@@ -84,7 +84,7 @@ let getAttemptRateLegend = function(){
         to = attemptRateLegendValues[i + 1];
 
         labels.push(
-            '<i style="background:' + attemptRateColor(from + 1) + '"></i> ' +
+            '<i style="background:' + attemptRateColor(from + .0001) + '"></i> ' +
             from + '' + (to ? ' &ndash; ' + to + '' : '+'));
     }
     str += labels.join('<br>');
@@ -112,12 +112,10 @@ let getGenderRatioLegend = function(){
 legend.update = function (props) {
     let str = '';
     if(activeLayer==1){
-        str += getSuicideCountLegend();
-    }else if(activeLayer==2){
         str += getSuicideRateLegend();
-    }else if(activeLayer==3){
+    }else if(activeLayer==2){
         str += getAttemptRateLegend();
-    }else if(activeLayer==4){
+    }else if(activeLayer==3){
         str += getGenderRatioLegend();
     }
     this._div.innerHTML = str;
@@ -126,14 +124,12 @@ legend.update = function (props) {
 legend.addTo(map);
 
 map.on('baselayerchange', function (e) {
-    if(e.name=='Suicide'){
+    if(e.name=='Suicide Rate'){
         activeLayer = 1;
-    }else if(e.name=='Suicide Rate'){
-        activeLayer = 2;
     }else if(e.name=='Attempt Rate'){
-        activeLayer = 3;
+        activeLayer = 2;
     }else if(e.name=='Gender Ratio'){
-        activeLayer = 4;
+        activeLayer = 3;
     }
     legend.update();
 });

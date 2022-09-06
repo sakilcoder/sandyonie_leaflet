@@ -43,16 +43,16 @@ suicideRateLegendValues = [
 ]
 
 function suicideRateColor(d) {
-    return d > suicideRateLegendValues[9] ? '#7c0000' : // 27% +
-        d > suicideRateLegendValues[8] ? '#8e0000' : // 24% - 27%
-            d > suicideRateLegendValues[7] ? '#a00000' : // 21% - 24%
-                d > suicideRateLegendValues[6] ? '#b20000' : // 18% - 21%
-                    d > suicideRateLegendValues[5] ? '#b91919' : // 15% - 18%
-                        d > suicideRateLegendValues[4] ? '#c13232' : // 12% - 15%
-                            d > suicideRateLegendValues[3] ? '#c94c4c' : // 9% - 12%
-                                d > suicideRateLegendValues[2] ? '#d06666' : // 6% - 9%
-                                    d > suicideRateLegendValues[1] ? '#d87f7f' : // 3% - 6%
-                                        d > suicideRateLegendValues[0] ? '#e09999' : '#f7e5e5'; // 0% - 3% : null
+    return d > suicideRateLegendValues[9] ? '#2e8917' : // 27% +
+        d > suicideRateLegendValues[8] ? '#349c1a' : // 24% - 27%
+            d > suicideRateLegendValues[7] ? '#3bb01d' : // 21% - 24%
+                d > suicideRateLegendValues[6] ? '#acc421' : // 18% - 21%
+                    d > suicideRateLegendValues[5] ? '#ffc04c' : // 15% - 18%
+                        d > suicideRateLegendValues[4] ? '#ffa500' : // 12% - 15%
+                            d > suicideRateLegendValues[3] ? '#C46B21' : // 9% - 12%
+                                d > suicideRateLegendValues[2] ? '#894a17' : // 6% - 9%
+                                    d > suicideRateLegendValues[1] ? '#9c1a1a' : // 3% - 6%
+                                        d >= suicideRateLegendValues[0] ? '#751313' : '#dedede'; // 0% - 3% : null
 }
 
 function suicideRateStyle(feature) {
@@ -71,16 +71,27 @@ attemptRateLegendValues = [
 ]
 
 function attemptRateColor(d) {
-    return d > attemptRateLegendValues[9] ? '#7c0000' : // 27% +
-        d > attemptRateLegendValues[8] ? '#8e0000' : // 24% - 27%
-            d > attemptRateLegendValues[7] ? '#a00000' : // 21% - 24%
-                d > attemptRateLegendValues[6] ? '#b20000' : // 18% - 21%
-                    d > attemptRateLegendValues[5] ? '#b91919' : // 15% - 18%
-                        d > attemptRateLegendValues[4] ? '#c13232' : // 12% - 15%
-                            d > attemptRateLegendValues[3] ? '#c94c4c' : // 9% - 12%
-                                d > attemptRateLegendValues[2] ? '#d06666' : // 6% - 9%
-                                    d > attemptRateLegendValues[1] ? '#d87f7f' : // 3% - 6%
-                                        d > attemptRateLegendValues[0] ? '#e09999' : '#f7e5e5'; // 0% - 3% : null
+    // return d > attemptRateLegendValues[9] ? '#7c0000' : // 27% +
+    //     d > attemptRateLegendValues[8] ? '#8e0000' : // 24% - 27%
+    //         d > attemptRateLegendValues[7] ? '#a00000' : // 21% - 24%
+    //             d > attemptRateLegendValues[6] ? '#b20000' : // 18% - 21%
+    //                 d > attemptRateLegendValues[5] ? '#b91919' : // 15% - 18%
+    //                     d > attemptRateLegendValues[4] ? '#c13232' : // 12% - 15%
+    //                         d > attemptRateLegendValues[3] ? '#c94c4c' : // 9% - 12%
+    //                             d > attemptRateLegendValues[2] ? '#d06666' : // 6% - 9%
+    //                                 d > attemptRateLegendValues[1] ? '#d87f7f' : // 3% - 6%
+    //                                     d > attemptRateLegendValues[0] ? '#e09999' : '#f7e5e5'; // 0% - 3% : null
+
+    return d > attemptRateLegendValues[9] ? '#2e8917' : // 27% +
+        d > attemptRateLegendValues[8] ? '#349c1a' : // 24% - 27%
+            d > attemptRateLegendValues[7] ? '#3bb01d' : // 21% - 24%
+                d > attemptRateLegendValues[6] ? '#acc421' : // 18% - 21%
+                    d > attemptRateLegendValues[5] ? '#ffc04c' : // 15% - 18%
+                        d > attemptRateLegendValues[4] ? '#ffa500' : // 12% - 15%
+                            d > attemptRateLegendValues[3] ? '#C46B21' : // 9% - 12%
+                                d > attemptRateLegendValues[2] ? '#894a17' : // 6% - 9%
+                                    d > attemptRateLegendValues[1] ? '#9c1a1a' : // 3% - 6%
+                                        d >= attemptRateLegendValues[0] ? '#751313' : '#dedede'; // 0% - 3% : null
 }
 
 function attemptRateStyle(feature) {

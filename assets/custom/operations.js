@@ -16,7 +16,8 @@ let addSuicideRateLayer = function(){
     suicideRateLayer = L.geoJson(indonesia, {
         style: suicideRateStyle,
         onEachFeature: onEachsuicideRate,
-    });  
+    }).addTo(map);
+    map.fitBounds(suicideRateLayer.getBounds());
 }
 
 let addAttemptRateLayer = function(){
