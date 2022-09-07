@@ -19,7 +19,8 @@ map.options.maxZoom = 8;
 basemapCarto.addTo(map);
 
 L.easyButton('fa-home fa-lg', function () {
-    map.setView([-3, 113.9213], 5);
+    // map.setView([-3, 113.9213], 5);
+    map.fitBounds(suicideRateLayer.getBounds());
 }).addTo(map);
 
 // addSuicideLayer();
@@ -100,7 +101,7 @@ let getGenderRatioLegend = function(){
         to = genderRatioLegendValues[i + 1];
 
         labels.push(
-            '<i style="background:' + genderRatioColor(from + 1) + '"></i> ' +
+            '<i style="background:' + genderRatioColor(from + .001) + '"></i> ' +
             from + '' + (to ? ' &ndash; ' + to + '' : '+'));
     }
     str += labels.join('<br>');
